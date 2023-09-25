@@ -34,8 +34,6 @@ def handle_connection(conn, addr):
         response = send_request("www.google.com", 80, request)
         conn.sendall(response)
 
-
-
 def start_server():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server_socket:
         server_socket.bind((PROXY_SERVER_HOST, PROXY_SERVER_PORT))
